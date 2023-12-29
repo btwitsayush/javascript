@@ -2,7 +2,6 @@
 
 
 //Data Types 
-
 let name="Ayush"
 let age=22
 let isLoggedint=true
