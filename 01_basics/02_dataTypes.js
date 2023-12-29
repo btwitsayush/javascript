@@ -25,4 +25,4 @@ let isLoggedint=true
 // if we want to some information regarding any data type we can use "typeof" .
 console.log(typeof  "Ayush") // to check type of any data 
 console.log(typeof age ); // to check type of any variable
-console.log(typeof null);// to know about any dataTypes.
+console.log(typeof null);// to know about any dataTypes
