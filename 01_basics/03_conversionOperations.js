@@ -49,6 +49,31 @@ console.log(typeof stringNumber);
 
 //it will convert every value in string whether it's null,undefined,number,boolean.
 
+// ************************Operations**************************
+ let value=3
+ let negValue= -value
+// console.log(negValue);
+
+// console.log(2+2);
+// console.log(2-2);
+// console.log(2/2);
+// console.log(2%2);
+// console.log(2*2);
+// console.log(2**3);// power
 
 
+let str1="Hello"
+let str2=" Ayush"
+
+let str3=str1+str2  
+// only addition operation can be apllied on string if we aplly any other operation like {-,%,*,/} we will get a output NaN
+
+
+// console.log(str3)
+
+// some complex Situations
+console.log("1"+2); //output=> 12
+console.log(1+"2"); //output=> 12
+console.log("1"+2+2); //output=> 122
+console.log(1+2+"2"); //output=> 132
 
