@@ -33,7 +33,7 @@ console.log(typeof booleanIsLoggedIn);
 
  //output for different conditions
 
- //  1=>"rue" 0=>"false"
+ //  1=>"true" 0=>"false"
  // null,undefined=>"false"
  // for any String value and number other than 0 it will return "true" even for negative numbers.
 
