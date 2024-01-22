@@ -63,3 +63,28 @@ Return type of variables in JavaScript
        Function  =>  function
        Object  =>  object
        */
+
+      //  ***********************************************
+
+      // Stack(Primitive), Heap (Non-Primitive)
+
+
+    let name="Ayush"  
+    let anotherName= name
+    anotherName= "Ayush Srivastava"
+
+    // console.log(anotherName);
+    // console.log(name);
+
+    let userOne ={
+      email: "srivastavaayush123@gmail.com",
+      upi:"srivastavaayush123@bl"
+    }
+    let userTwo=userOne;
+
+    //  userTwo.email="srivastava123@gmail.com"
+    //  console.log(userOne.email); //output=>srivastava123@gmail.com
+    //  console.log( userTwo.email);//output=>srivastava123@gmail.com
+
+    
+// Both variables ended up with the same value because both of them are non-primitive types. In non-primitive types, the data reference is shared, so if the value of one variable is updated, it affects both variables since they share the same data reference.
