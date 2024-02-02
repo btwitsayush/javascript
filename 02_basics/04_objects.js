@@ -32,9 +32,9 @@ const obj1 ={
 const obj2={
     3:"ayush@gmail.com"
 }
-
-// const obj3 = Object.assign({},obj1,obj2)
-const obj3={...obj1,...obj2}
+//merges the objects in one object
+const obj3 = Object.assign({},obj1,obj2)
+// const obj3={...obj1,...obj2}
 // console.log(obj3);
 
 //Arrays of object
@@ -53,13 +53,52 @@ const user =[
 
 // console.log(user[0].id);
 
-console.log(tinderUser);
+// console.log(tinderUser);
 
 //Object.keys helps us to fetch data in form of Arrays which will be usefull for us to iterate over it
-console.log(Object.keys(tinderUser));
+// console.log(Object.keys(tinderUser));
 
-console.log(Object.values(tinderUser));
+//Object.values returns all the values
+// console.log(Object.values(tinderUser));
+// Object.entries returns key and value in array
+// console.log(Object.entries(tinderUser));
 
-console.log(Object.entries(tinderUser));
+// console.log(tinderUser.hasOwnProperty('isLoggedIn'));//return boolean value basically it checks whether the property exist or not in the object
 
-console.log(tinderUser.hasOwnProperty('isLoggedIn'));//return boolean value basically it checks whether the property exist or not in the object
+
+//object de-structure 
+
+
+const course = {
+    coursename:"Js in hindi",
+    price:999,
+    courseInstructor:"Ayush"
+}
+// console.log(course.courseInstructor);
+
+const {courseInstructor:instructor} =course
+
+console.log(instructor);
+
+
+//API
+
+/*
+{
+    this is json
+} */
+
+
+// {
+//     "name":"Ayush",
+//     "courseName":"js in hindi",
+//     "price":99
+// }
+
+//API can be also in format of Array
+
+[
+    {},
+    {},
+    {}
+]
