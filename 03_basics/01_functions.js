@@ -53,3 +53,28 @@ function loginUserDefault(username="user"){
 
 // we can also over write the value
 // console.log(loginUserDefault("Ayush"));
+
+//... is known as spread operator but also as rest operator which returns value in form of array
+function calculateCartPrice(...num1){
+
+    return num1;
+}
+// console.log(calculateCartPrice(200,400,500,6000));
+
+const user={
+    userName:"Ayush",
+    price:199
+}
+//to pass any kind of object in function we do this 
+function handleObject(anyObject) {
+   console.log(`User Name is ${anyObject.userName} and price is ${anyObject.price}`);
+}
+//samething we can do for Array as well
+//  handleObject(user);//the function we are passing we specially need to mention it.
+
+//we can also do this 
+handleObject({
+    userName:"Ayush Srivatava",
+    price:999
+})
+
