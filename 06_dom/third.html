@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <script>
+
+//creating element 
+    const div=document.createElement('div')
+    console.log(div);
+    //kese bhi element mai html attributes (like id,class,title,height,width) ye sb ya tu direct set kr skte hai ya phir setAttribute ka use kr skte hai 
+    div.className="parent";
+    div.id="main";
+    // div.style.color="red";
+    div.setAttribute("title","generated title");
+
+    // div.setAttribute("style","length:100px;width:100px; background-color:white;");
+
+
+    //adding text to element their are 2 methods for this
+
+    // div.innerText="Learning DOM from Chai aur code"
+    const addText=document.createTextNode("Learning DOM from Chai aur code")
+    // console.log(addText);
+
+    //ye tb use krte hai jb hme apne element ko existing element mai add krna ho tu
+
+    div.appendChild(addText)
+
+    const p=document.createElement('h1');
+
+    const h1txt= document.createTextNode("   Hi i am h1")
+
+    // adding h1 to div
+    div.appendChild(h1txt);
+
+    // adding div to document
+    document.body.appendChild(div)
+    </script>
+    
+</body>
+</html>
