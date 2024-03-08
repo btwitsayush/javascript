@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM lecture 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <ul class="languages">
+        <li>Java Script</li>
+        
+    </ul>
+
+    <script>
+
+function addLanguage(langName){
+
+  const li= document.createElement('li');
+
+
+  li.innerHTML=`${langName}`
+
+
+  document.querySelector('.languages').appendChild(li);
+
+}
+addLanguage("java");
+addLanguage("python");
+
+
+//both the functions create elements, but when we use innerHTML, it traverses from the top and then adds our element, while Text node directly adds the value
+
+function addLanguageOptimize(langName){
+
+    const li = document.createElement('li');
+    li.appendChild(document.createTextNode(`${langName}`));  
+    document.querySelector('.languages').appendChild(li);
+
+}
+addLanguage("golang");
+addLanguageOptimize("typescript");
+
+
+//edit
+
+const firstLang=document.querySelector("li:first-child");
+
+firstLang.innerHTML="React-Js"
+
+//second approach if we want to creatw new type of element 
+const fifthLang= document.querySelector('li:nth-child(5)');
+
+// const newli=document.createElement('h1');
+const newli=document.createElement('li');
+newli.textContent="Nodejs";
+fifthLang.replaceWith(newli);
+
+// remove
+
+const lastLang= document.querySelector('li:last-child')
+lastLang.remove();
+
+    </script>
+    
+</body>
+</html>
