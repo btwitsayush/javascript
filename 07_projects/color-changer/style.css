@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+  }
+    
+    span {
+      display: block;
+      height: 150px;
+      width: 150px;
+      border: 1px solid black ;
+      cursor: pointer;
+    }
+    
+    #grey {
+      background-color: gray;
+    }
+    #white {
+      background-color: white;
+    }
+    #blue{
+      background-color: blue;
+    }
+    #yellow{
+      background-color: yellow;
+    }
+    

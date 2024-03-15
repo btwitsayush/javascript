@@ -8,7 +8,7 @@
 /*let score=undefined
 console.log(typeof score);
 
-let numScore=Number (score)
+let numScore= Number (score)
 console.log(typeof numScore);
 console.log( numScore);*/
 
