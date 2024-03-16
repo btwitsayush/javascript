@@ -3,6 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    color: black;
+}
 .container{
     min-height:50vh; 
     width: 50%;
@@ -26,5 +29,14 @@
     margin-top: 15px;
 }
 
+.calculator h4 {
+    margin-top: 30px;
+}
+.calculator h3 {
+    margin-top: 30px;
+}
 
+.calculator p{
+    margin-top: 15px;
+}
 
