@@ -1,0 +1,24 @@
+body{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+  
+}
+.container{
+    height: 80vh;
+    width: 50vw;
+    display: flex;
+    /* background-color: antiquewhite; */
+    justify-content: center;
+    align-items: center;   
+}
+
+#clock{
+    text-align: center;
+    height: 5vh;
+    width: 15vw;
+    color: orange;
+    font-size: medium;
+    font-weight: 500;
+}
