@@ -2,7 +2,7 @@ const randomNumber = Math.floor(Math.random() * 100) + 1;
 
 console.log(randomNumber);
 
-const count =10;
+let count =10;
 
 // created an array to add previous inputs
 const array =[];
@@ -16,7 +16,7 @@ const form = document.querySelector('#form');
     // getting value from user 
 
     const guess = parseInt(document.getElementById('number').value);
-    const count = document.getElementById('count');
+    const attempt = document.getElementById('count');
 
 // adding previous guesses to array
     array.push(guess);
@@ -37,8 +37,8 @@ const form = document.querySelector('#form');
     }
     else{
         result.innerHTML=" not correct guess";
-        count--;
-        count.textContent=count;
+       count = count-1;
+        attempt.innerText=count;
     }
 
 })
