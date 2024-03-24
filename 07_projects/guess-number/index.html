@@ -9,18 +9,34 @@
 </head>
 <body>
 
+    <div class="main">
+
+        <div class="rules">
+        <h4>Try and guess a random number between 1 and 100.</h4>
+        <h5>You have 10 attempts to guess the right number</h5>
+        <h1>Guess a number</h1>
+       </div> <!-- rules -->
+       
+  
+       <div class="parent">
+<div class="box">
+
 <form id="form">
 
     <label for="number"></label>
     <input type="text" id = "number">
     <button type="submit">Submit guess</button>
+    <div class="result">
+   <p> Previous guess : <span id="previous"></span><br></p>
+    <span id="result"></span><br>
+   <p> Remaining Attempts <span id="count"></span><br></p> 
+</div><!-- result -->
 </form>
-<span id="previous"></span><br>
-<span id="result"></span><br>
-<span id="count"></span><br>
 
-  
-    </div>
-    <script src="script.js"></script>
+</div><!-- box -->
+</div><!-- parent -->
+</div> <!-- main -->
+
+<script src="script.js"></script>
 </body>
 </html>
