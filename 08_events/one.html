@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: blue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+    
+</body>
+<script>  
+
+/* first method to use events
+
+document.getElementById('owl').onclick=function(){
+    alert("owl clicked");
+}
+
+*/
+
+/*Event listner mai 3 arguments diye jate hai last wala mandtory nhi hota hai issilye nhi dete by default wo false he hota hai
+document.getElementById('owl').addEventListener('click',(e)=>{
+
+
+},false(ise event propogation kehte hai ))
+*/
+/* 2nd method 
+
+document.getElementById('owl').addEventListener('click',(e)=>{
+     alert("owl clicked");
+
+})
+
+*/
+//imp topics to study
+// type,timestamp,defaultPrevented
+// target,toElement,srcElement,currentTarget
+// clientX,clientY,screenX,screenY
+// altKey,ctrlKey,shiftKey,keyCode
+
+
+
+// isse kehte hai event bublling ye innerElement sai outerElement ke traf jata hai jb hum owl pr click krenge tu pehla output ayega owl clicked phir dusra ayega clicked inside ul 
+
+// document.getElementById('images').addEventListener('click',(e)=>{
+//     console.log("clicked inside ul ");
+
+// },false)
+
+// document.getElementById('owl').addEventListener('click',(e)=>{
+   
+//     console.log("owl clicked");
+
+// },false)
+
+//ab hum event capturing kr rhe 
+// jb hum owl pr click krenge tu pehla output ayega  clicked inside ul phir dusra ayega owl clicked 
+
+
+// document.getElementById('images').addEventListener('click',(e)=>{
+    
+//     console.log("clicked inside ul ");
+
+// },true)
+
+// document.getElementById('owl').addEventListener('click',(e)=>{
+//     console.log("owl clicked");
+    
+// },true)
+
+/*
+document.getElementById('google').addEventListener('click',(e)=>{
+
+    console.log("google clicked");
+//isse kya hoga ke humare link hme google pr le ye nhi jayege jo default behaviour hai usko bhi hm rok de rhe  
+    e.preventDefault();
+// basically ye kya krta hai ke baki ke next  event ko occur hone sai rok deta hai
+    e.stopPropagation();
+    
+},false)
+*/
+
+// removing images on click
+
+// we will use 2 property of event here 
+
+// 1st  event.target.parentNode(isse hum jb img pr click krenge tu uska parent jo hai li wo milega hume li remove krna hai pura nhi to image tu remove ho jayege pr wo bullet point reh jayega)
+
+// 2nd  event.target.tagNmae(ise kya hoga ki jb hum jis tag pr click krenge uska name ayega  iska use hum conditon lgane pr krenge ke jb img pr click ho tb he remove kro or khi click ho tu remove na kro)
+
+
+
+const images = document.getElementById('images')
+
+images.addEventListener('click',(e)=>{
+
+    if(e.target.tagName=='IMG'){
+
+        let currentElement = e.target.parentNode;
+        
+        currentElement.remove()
+    }
+
+
+
+},false)
+
+
+
+</script>
+</html>
